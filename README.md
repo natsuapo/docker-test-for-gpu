@@ -256,6 +256,41 @@ Test accuracy: 0.991
 Here one epoch is 5s.
 
 
+### RTX-2080Ti:
+```
+x_train shape: (60000, 28, 28, 1)
+60000 train samples
+10000 test samples
+Train on 60000 samples, validate on 10000 samples
+Epoch 1/12
+60000/60000 [==============================] - 10s 161us/step - loss: 0.2665 - acc: 0.9170 - val_loss: 0.0579 - val_acc: 0.9810
+Epoch 2/12
+60000/60000 [==============================] - 3s 44us/step - loss: 0.0867 - acc: 0.9744 - val_loss: 0.0420 - val_acc: 0.9862
+Epoch 3/12
+60000/60000 [==============================] - 3s 44us/step - loss: 0.0659 - acc: 0.9805 - val_loss: 0.0328 - val_acc: 0.9889
+Epoch 4/12
+60000/60000 [==============================] - 3s 43us/step - loss: 0.0547 - acc: 0.9833 - val_loss: 0.0302 - val_acc: 0.9888
+Epoch 5/12
+60000/60000 [==============================] - 3s 48us/step - loss: 0.0475 - acc: 0.9857 - val_loss: 0.0280 - val_acc: 0.9912
+Epoch 6/12
+60000/60000 [==============================] - 4s 66us/step - loss: 0.0419 - acc: 0.9873 - val_loss: 0.0276 - val_acc: 0.9909
+Epoch 7/12
+60000/60000 [==============================] - 4s 63us/step - loss: 0.0377 - acc: 0.9883 - val_loss: 0.0253 - val_acc: 0.9920
+Epoch 8/12
+60000/60000 [==============================] - 4s 62us/step - loss: 0.0341 - acc: 0.9894 - val_loss: 0.0272 - val_acc: 0.9913
+Epoch 9/12
+60000/60000 [==============================] - 4s 63us/step - loss: 0.0312 - acc: 0.9906 - val_loss: 0.0257 - val_acc: 0.9921
+Epoch 10/12
+60000/60000 [==============================] - 4s 66us/step - loss: 0.0291 - acc: 0.9913 - val_loss: 0.0284 - val_acc: 0.9913
+Epoch 11/12
+60000/60000 [==============================] - 4s 66us/step - loss: 0.0271 - acc: 0.9913 - val_loss: 0.0242 - val_acc: 0.9923
+Epoch 12/12
+60000/60000 [==============================] - 4s 59us/step - loss: 0.0263 - acc: 0.9919 - val_loss: 0.0236 - val_acc: 0.9927
+Test loss: 0.0235771139398
+Test accuracy: 0.9927
+```
+
+
 ## Stopping container
 For stopping container, please refer to https://qiita.com/tifa2chan/items/e9aa408244687a63a0ae
 

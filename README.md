@@ -4,8 +4,9 @@
 
 
 ### Process of installing AMD graphic board driver: 
-Follow this qiita tutorial: https://qiita.com/kz_lil_fox/items/d1a18f58e9e5033e7e14
-
+References:
+qiita tutorial: https://qiita.com/kz_lil_fox/items/d1a18f58e9e5033e7e14
+github: https://github.com/RadeonOpenCompute/ROCm-docker/blob/master/quick-start.md
 
 
 

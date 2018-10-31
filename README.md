@@ -174,7 +174,7 @@ Here one ephco cost 66s.
 
 ## Build environment of Nvidia GPU:
 ### Process of installing Nvidia graphic board driver: 
-follow the url: https://qiita.com/spiderx_jp/items/460cd47ce0e0ff41c762
+follow the url: https://qiita.com/spiderx_jp/items/460cd47ce0e0ff41c762  
 result of GTX-1070: 
 ```
 user@user-desktop:~$ nvidia-smi
@@ -198,9 +198,14 @@ Wed Oct 31 13:28:59 2018
 |    0      3470      G   /usr/lib/firefox/firefox                       3MiB |
 +-----------------------------------------------------------------------------+
 ```
-### install nvidia-docker2:
-https://qiita.com/spiderx_jp/items/32c421fd00c6ade19720
+### Install nvidia-docker2:  
+Follow the tutorial: https://qiita.com/spiderx_jp/items/32c421fd00c6ade19720
 
+### Prepare the Dockerfile for installing anaconda, jupyter, tensorflow, keras:
+- Follow the tutorial: https://qiita.com/tomo_makes/items/0bb10bcaf7093855e9e5
+- For dockerfile build: http://www.atmarkit.co.jp/ait/articles/1407/08/news031.html
+
+### The docker file: 
 
 GTX-1080
 GTX-2080

@@ -1,6 +1,4 @@
-# docker-test-for-gpu
-
-
+# A memo for building environment for different GPU via docker
 
 ## find out the graphic card type: 
 ```

@@ -1,4 +1,4 @@
-# A memo for building environment for different GPU via docker
+# A memo for building environment for different GPUs via docker
 
 ## find out the graphic card type: 
 ```
@@ -215,16 +215,44 @@ sudo nvidia-docker run --rm -p 8888:8888 -t test/my-dl-image
 ```
 jupyter notebook --ip=0.0.0.0 --allow-root
 
+x_train shape: (60000, 28, 28, 1)
+60000 train samples
+10000 test samples
+Train on 60000 samples, validate on 10000 samples
+Epoch 1/12
+60000/60000 [==============================] - 11s 184us/step - loss: 0.2808 - acc: 0.9140 - val_loss: 0.0607 - val_acc: 0.9802
+Epoch 2/12
+60000/60000 [==============================] - 5s 87us/step - loss: 0.0919 - acc: 0.9722 - val_loss: 0.0426 - val_acc: 0.9847
+Epoch 3/12
+60000/60000 [==============================] - 5s 89us/step - loss: 0.0667 - acc: 0.9797 - val_loss: 0.0364 - val_acc: 0.9875
+Epoch 4/12
+60000/60000 [==============================] - 5s 86us/step - loss: 0.0549 - acc: 0.9834 - val_loss: 0.0297 - val_acc: 0.9899
+Epoch 5/12
+60000/60000 [==============================] - 5s 75us/step - loss: 0.0469 - acc: 0.9858 - val_loss: 0.0281 - val_acc: 0.9906
+Epoch 6/12
+60000/60000 [==============================] - 5s 86us/step - loss: 0.0420 - acc: 0.9872 - val_loss: 0.0313 - val_acc: 0.9887
+Epoch 7/12
+60000/60000 [==============================] - 5s 87us/step - loss: 0.0386 - acc: 0.9885 - val_loss: 0.0296 - val_acc: 0.9903
+Epoch 8/12
+60000/60000 [==============================] - 5s 84us/step - loss: 0.0347 - acc: 0.9895 - val_loss: 0.0263 - val_acc: 0.9919
+Epoch 9/12
+60000/60000 [==============================] - 5s 86us/step - loss: 0.0325 - acc: 0.9899 - val_loss: 0.0274 - val_acc: 0.9910
+Epoch 10/12
+60000/60000 [==============================] - 5s 79us/step - loss: 0.0290 - acc: 0.9910 - val_loss: 0.0304 - val_acc: 0.9904
+Epoch 11/12
+60000/60000 [==============================] - 5s 80us/step - loss: 0.0285 - acc: 0.9912 - val_loss: 0.0273 - val_acc: 0.9916
+Epoch 12/12
+60000/60000 [==============================] - 5s 86us/step - loss: 0.0277 - acc: 0.9917 - val_loss: 0.0293 - val_acc: 0.9910
+Test loss: 0.0293040658824
+Test accuracy: 0.991
+
 ```
+Here one epoch is 5s.
 
 
+## Stopping container
+For stopping container, please refer to https://qiita.com/tifa2chan/items/e9aa408244687a63a0ae
 
-
-## For stopping container, please refer to https://qiita.com/tifa2chan/items/e9aa408244687a63a0ae
-
-
-GTX-1080
-GTX-2080
 
 
 

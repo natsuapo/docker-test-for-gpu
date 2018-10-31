@@ -92,7 +92,9 @@ pip3 install keras
 
 benchmark code can be found in https://github.com/keras-team/keras/blob/master/examples/mnist_cnn.py
 
-Running the benchmark to see the result: 
+Running the benchmark to see the result:
+
+#### Running result of AMD RX570 
 ```
 x_train shape: (60000, 28, 28, 1)
 60000 train samples
@@ -128,6 +130,42 @@ Test accuracy: 0.9922
 ```
 Gets to 99.22 test accuracy after 12 epochs (there is still a lot of margin for parameter tuning).
 9 seconds per epoch on a AMD X470. 
+
+#### Running result of AMD RX580
+```
+x_train shape: (60000, 28, 28, 1)
+60000 train samples
+10000 test samples
+Train on 60000 samples, validate on 10000 samples
+Epoch 1/12
+60000/60000 [==============================] - 21s 350us/step - loss: 0.2530 - acc: 0.9229 - val_loss: 0.0630 - val_acc: 0.9795
+Epoch 2/12
+60000/60000 [==============================] - 9s 144us/step - loss: 0.0845 - acc: 0.9750 - val_loss: 0.0389 - val_acc: 0.9865
+Epoch 3/12
+60000/60000 [==============================] - 9s 143us/step - loss: 0.0645 - acc: 0.9804 - val_loss: 0.0315 - val_acc: 0.9889
+Epoch 4/12
+60000/60000 [==============================] - 8s 140us/step - loss: 0.0548 - acc: 0.9836 - val_loss: 0.0300 - val_acc: 0.9903
+Epoch 5/12
+60000/60000 [==============================] - 8s 141us/step - loss: 0.0454 - acc: 0.9857 - val_loss: 0.0319 - val_acc: 0.9887
+Epoch 6/12
+60000/60000 [==============================] - 8s 137us/step - loss: 0.0410 - acc: 0.9877 - val_loss: 0.0291 - val_acc: 0.9911
+Epoch 7/12
+60000/60000 [==============================] - 8s 133us/step - loss: 0.0374 - acc: 0.9886 - val_loss: 0.0276 - val_acc: 0.9906
+Epoch 8/12
+60000/60000 [==============================] - 8s 141us/step - loss: 0.0338 - acc: 0.9894 - val_loss: 0.0264 - val_acc: 0.9907
+Epoch 9/12
+60000/60000 [==============================] - 8s 141us/step - loss: 0.0320 - acc: 0.9902 - val_loss: 0.0268 - val_acc: 0.9916
+Epoch 10/12
+60000/60000 [==============================] - 8s 141us/step - loss: 0.0292 - acc: 0.9912 - val_loss: 0.0280 - val_acc: 0.9909
+Epoch 11/12
+60000/60000 [==============================] - 8s 141us/step - loss: 0.0276 - acc: 0.9919 - val_loss: 0.0283 - val_acc: 0.9910
+Epoch 12/12
+60000/60000 [==============================] - 8s 140us/step - loss: 0.0276 - acc: 0.9919 - val_loss: 0.0255 - val_acc: 0.9919
+Test loss: 0.025465260136913276
+Test accuracy: 0.9919
+
+```
+One epoch here cost around 8s, a little better than RX570.
 
 
 Try to run keras with CPU:

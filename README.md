@@ -175,6 +175,12 @@ Here one ephco cost 66s.
 ## Build environment of Nvidia GPU:
 ### Process of installing Nvidia graphic board driver: 
 follow the url: https://qiita.com/spiderx_jp/items/460cd47ce0e0ff41c762  
+
+For installing driver, use autoinstaller might be eaiser: 
+```
+sudo ubuntu -drivers autoinstall
+```
+
 result of GTX-1070: 
 ```
 user@user-desktop:~$ nvidia-smi

@@ -203,9 +203,25 @@ Follow the tutorial: https://qiita.com/spiderx_jp/items/32c421fd00c6ade19720
 
 ### Prepare the Dockerfile for installing anaconda, jupyter, tensorflow, keras:
 - Follow the tutorial: https://qiita.com/tomo_makes/items/0bb10bcaf7093855e9e5
-- For dockerfile build: http://www.atmarkit.co.jp/ait/articles/1407/08/news031.html
+- For dockerfile build: http://www.atmarkit.co.jp/ait/articles/1407/08/news031.html  
+- The docker file is available in https://github.com/natsuapo/docker-test-for-gpu/blob/master/Dockerfile
 
-### The docker file: 
+### Build iamge from docker file and run the image: (make sure that dockerfile is in the current directory)
+```
+sudo docker build -t test/my-dl-image .
+sudo nvidia-docker run --rm -p 8888:8888 -t test/my-dl-image
+```
+### Run jupyter notebook in docker and test the mnist benchmark again: 
+```
+jupyter notebook --ip=0.0.0.0 --allow-root
+
+```
+
+
+
+
+## For stopping container, please refer to https://qiita.com/tifa2chan/items/e9aa408244687a63a0ae
+
 
 GTX-1080
 GTX-2080

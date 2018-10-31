@@ -37,7 +37,7 @@ References:
 https://qiita.com/tkyonezu/items/0f6da57eb2d823d2611d
 
 
-## install the grpahic card driver: 
+## Build environement of AMD GPU
 ### Process of installing AMD graphic board driver: 
 References:
 qiita tutorial: https://qiita.com/kz_lil_fox/items/d1a18f58e9e5033e7e14  
@@ -172,27 +172,36 @@ Test accuracy: 0.9899
 Here one ephco cost 66s. 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+## Build environment of Nvidia GPU:
 ### Process of installing Nvidia graphic board driver: 
-GTX-1070
+follow the url: https://qiita.com/spiderx_jp/items/460cd47ce0e0ff41c762
+result of GTX-1070: 
+```
+user@user-desktop:~$ nvidia-smi
+Wed Oct 31 13:28:59 2018       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 384.130                Driver Version: 384.130                   |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|===============================+======================+======================|
+|   0  GeForce GTX 1070    Off  | 00000000:01:00.0  On |                  N/A |
+|  0%   37C    P8    11W / 151W |    194MiB /  8105MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                       GPU Memory |
+|  GPU       PID   Type   Process name                             Usage      |
+|=============================================================================|
+|    0      1640      G   /usr/lib/xorg/Xorg                            81MiB |
+|    0      2365      G   /usr/bin/gnome-shell                         107MiB |
+|    0      3470      G   /usr/lib/firefox/firefox                       3MiB |
++-----------------------------------------------------------------------------+
+```
+### install nvidia-docker2:
+https://qiita.com/spiderx_jp/items/32c421fd00c6ade19720
+
+
 GTX-1080
 GTX-2080
 

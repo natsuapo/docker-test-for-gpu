@@ -289,7 +289,7 @@ Epoch 12/12
 Test loss: 0.0235771139398
 Test accuracy: 0.9927
 ```
-
+Here one epoch is 4s, showing that RTX-2080Ti performs better than GTX-1070 (Duh!). 
 
 ## Stopping container
 For stopping container, please refer to https://qiita.com/tifa2chan/items/e9aa408244687a63a0ae

@@ -25,6 +25,13 @@ user@user-desktop:~$ lspci | grep ' VGA ' | cut -d" " -f 1 | xargs -i lspci -v -
 
 ```
 
+## find out the CPU version: 
+```
+cat /proc/cpuinfo 
+Intel(R) Core(TM) i7-8700 CPU @ 3.20GHz
+cpu cores	: 6
+```
+
 ## install docker
 References: 
 https://qiita.com/tkyonezu/items/0f6da57eb2d823d2611d
@@ -124,9 +131,45 @@ Gets to 99.22 test accuracy after 12 epochs (there is still a lot of margin for 
 
 
 Try to run keras with CPU:
+To run CPU instead of GPU, run the benchmark code with the following code: 
+```
+with tf.device('/cpu:0'):
 ```
 
 ```
+x_train shape: (60000, 28, 28, 1)
+60000 train samples
+10000 test samples
+Train on 60000 samples, validate on 10000 samples
+Epoch 1/12
+60000/60000 [==============================] - 62s 1ms/step - loss: 0.2626 - acc: 0.9198 - val_loss: 0.0582 - val_acc: 0.9810
+Epoch 2/12
+60000/60000 [==============================] - 64s 1ms/step - loss: 0.0892 - acc: 0.9730 - val_loss: 0.0433 - val_acc: 0.9865
+Epoch 3/12
+60000/60000 [==============================] - 66s 1ms/step - loss: 0.0686 - acc: 0.9796 - val_loss: 0.0316 - val_acc: 0.9893
+Epoch 4/12
+60000/60000 [==============================] - 66s 1ms/step - loss: 0.0555 - acc: 0.9833 - val_loss: 0.0361 - val_acc: 0.9881
+Epoch 5/12
+60000/60000 [==============================] - 61s 1ms/step - loss: 0.0467 - acc: 0.9865 - val_loss: 0.0295 - val_acc: 0.9903
+Epoch 6/12
+60000/60000 [==============================] - 61s 1ms/step - loss: 0.0429 - acc: 0.9870 - val_loss: 0.0293 - val_acc: 0.9901
+Epoch 7/12
+60000/60000 [==============================] - 61s 1ms/step - loss: 0.0369 - acc: 0.9886 - val_loss: 0.0311 - val_acc: 0.9900
+Epoch 8/12
+60000/60000 [==============================] - 61s 1ms/step - loss: 0.0351 - acc: 0.9890 - val_loss: 0.0267 - val_acc: 0.9921
+Epoch 9/12
+60000/60000 [==============================] - 63s 1ms/step - loss: 0.0322 - acc: 0.9904 - val_loss: 0.0323 - val_acc: 0.9899
+Epoch 10/12
+60000/60000 [==============================] - 63s 1ms/step - loss: 0.0299 - acc: 0.9910 - val_loss: 0.0257 - val_acc: 0.9917
+Epoch 11/12
+60000/60000 [==============================] - 65s 1ms/step - loss: 0.0266 - acc: 0.9915 - val_loss: 0.0267 - val_acc: 0.9920
+Epoch 12/12
+60000/60000 [==============================] - 66s 1ms/step - loss: 0.0253 - acc: 0.9923 - val_loss: 0.0355 - val_acc: 0.9899
+Test loss: 0.035532569728241745
+Test accuracy: 0.9899
+
+```
+Here one ephco cost 66s. 
 
 
 
